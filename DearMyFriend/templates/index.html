@@ -8,5 +8,17 @@
     <input type="submit">
 </form>
 {{method}}test
+    <div id="comment">
+        <ul id="list">
+            {% for c in comments %}
+                <li>
+                    <div id="author">{{c.auther}}</div>
+                    <div id="title">{{c.title}}</div>
+                    <div id="text">{{c.text}}</div>
+                </li>
+            {% endfor %}
+        </ul>
+        
+    </div>
 {% endblock content %}
 
