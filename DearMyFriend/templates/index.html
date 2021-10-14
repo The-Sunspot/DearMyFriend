@@ -11,8 +11,8 @@
         <ul id="list">
             {% for c in comments %}
                 <li>
-                    <div id="author">{{c.auther}}aaa</div>
-                    <div id="title">{{c.title}}</div>
+                    <div id="author">{{c.auther}}{{c.id}}aaa</div>
+                    <div id="title"><p>{{c.title}}</p></div>
                     <div id="text">{{c.text}}</div>
                 </li>
             {% endfor %}

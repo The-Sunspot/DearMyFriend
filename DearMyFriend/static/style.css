@@ -1,6 +1,8 @@
 body{
     font-family: "YouYuan";
     background-color: #fffae8;
+    word-wrap:break-word;
+    word-break:normal; 
 }
 #author{
     font-weight: bolder;

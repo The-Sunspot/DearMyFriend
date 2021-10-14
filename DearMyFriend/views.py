@@ -14,5 +14,5 @@ def show():
         word=Word(title=title,text=text,author=author)
         db.session.add(word)
         db.session.commit()   
-        return render_template('index.html',comments=Word.query.all())
-    return render_template('index.html',comments=Word.query.all())
+        return render_template('index.html',comments=Word.query.order_by(Word.id.desc()).all())
+    return render_template('index.html',comments=Word.query.order_by(Word.id.desc()).all())
