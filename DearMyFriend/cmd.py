@@ -1,5 +1,6 @@
-
+import string
 import click
+import random
 from DearMyFriend import db,app
 from DearMyFriend.models import User,Word
 
@@ -30,3 +31,26 @@ def admin(username,password):
     click.echo(user.name)
     db.session.commit()
     click.echo('成功')
+
+@app.cli.command()
+def delWord():
+    """清除Word库"""
+    while Word.query.count()>0:
+        db.session.delete(Word.query.first())
+    db.session.commit()
+    click.echo("Word库清空")
+
+@app.cli.command()
+def initdata():
+    '''填充1000个初始数据'''
+    for i in range(1,1001):
+        author=1
+        title=ranstr(10)
+        text=ranstr(20)
+        db.session.add(Word(title=title,author=author,text=text))
+    db.session.commit()
+    click.echo("填充了1000个数据")
+
+def ranstr(num):
+    return ''.join(random.sample(string.ascii_letters + string.digits, num))
+     
