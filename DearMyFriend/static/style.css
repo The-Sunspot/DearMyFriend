@@ -1,0 +1,59 @@
+body{
+    font-family: "YouYuan";
+    background-color: #fffae8;
+}
+#author{
+    font-weight: bolder;
+    background-color: #fff;
+    border-bottom: 3px black;
+}
+#title{
+    background-color: #fff;
+    border-bottom: 3px black;
+}
+#text{
+    background-color: #fff;
+    border-bottom: 3px black;
+}
+li{
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.808);
+    margin: 10px;
+}
+#list{
+    margin: 0 auto;
+    list-style: none;
+    border-style: solid;
+    border: 5px;
+}
+#comment{
+    margin: 0 auto;
+    width: 40%;
+}
+#formbox{
+    margin: 50px;
+    text-align: center;
+}
+form{
+    width: 65%;
+    margin: 0 auto;
+}
+textarea{
+    width: 100%;
+    resize: none;
+    font-size: 30px;
+    font-family: "YouYuan";
+}
+label{
+    font-size: 35px;
+}
+#submit{
+    width: auto;  
+    padding: 9px 15px;  
+    background: #617798;  
+    border: 0;  
+    font-size: 20px;  
+    color: #FFFFFF;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px; 
+}

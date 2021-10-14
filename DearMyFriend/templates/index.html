@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-<form action=""method="post">
-    <label for="title"></label>
-    <input type="text" name="title">
-    <label for="text"></label>
-    <input type="text" name="text">
-    <input type="submit">
+    <div id="formbox">
+        <form action=""method="post" onsubmit="return check();">
+        <label>标题</label><textarea rows="1" cols="20" name="title" maxlength="100" id="title"></textarea><br>
+        <label>内容</label><textarea rows="5" cols="20" name="text" maxlength="5000" id="text"></textarea><br>
+        <input type="submit" id="submit">
+    </div>
 </form>
-{{method}}test
     <div id="comment">
         <ul id="list">
             {% for c in comments %}
                 <li>
-                    <div id="author">{{c.auther}}</div>
+                    <div id="author">{{c.auther}}aaa</div>
                     <div id="title">{{c.title}}</div>
                     <div id="text">{{c.text}}</div>
                 </li>
